@@ -1,5 +1,13 @@
 The following new files/directories were created:
 <Test Directory>
+----.cicd
+--------minion
+--------requirements.txt
+--------tests.py
 ----.copier-answers.yml
 ----.github
 --------renovate.json5
+--------workflows
+------------full_run_win.yml
+------------main.yml
+----.pre-commit-config.yaml
