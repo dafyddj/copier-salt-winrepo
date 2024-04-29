@@ -17,13 +17,13 @@ jobs:
       salt-latest: ${{ steps.get-salt-versions.outputs.salt-latest }}
     steps:
       - id: get-salt-versions
-        uses: dafyddj/get-salt-versions@1fcbea0eee4404137e534d66f3c22846f7c2a7ec # v3.0.0
+        uses: dafyddj/get-salt-versions@ee33ae707a4646311c1a62dd54b57d6b2e9b3a33 # v3.1.0
   test:
     name: Run URL tests
     needs: gsv
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - uses: actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b # v4.1.4
       - name: Setup Salt
         uses: dafyddj/setup-salt-win@1fe09b1c0cdb721a43f9e5faa9bd079af8701803 # v2.2.0
         with:
