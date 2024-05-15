@@ -11,3 +11,4 @@ The following new files/directories were created:
 ------------full_run_win.yml
 ------------main.yml
 ----.pre-commit-config.yaml
+----example.sls
