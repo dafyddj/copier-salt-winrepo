@@ -1,4 +1,4 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: v2.0.15
+_commit: v2.0.15 # __copier_update_available v2.0.16
 _src_path: gh:dafyddj/copier-bootstrap
 template_name: copier-salt-winrepo
