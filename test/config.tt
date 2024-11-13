@@ -14,6 +14,7 @@ full_run_win_yml:.github/workflows/full_run_win.yml
 main_yml:.github/workflows/main.yml
 minion:.cicd/minion
 pre-commit_yaml:.pre-commit-config.yaml
+releaserc_cjs:.releaserc.cjs
 renovate_json5:.github/renovate.json5
 requirements_txt:.cicd/requirements.txt
 tests_py:.cicd/tests.py
