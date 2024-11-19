@@ -8,11 +8,8 @@
   "extends": [
     "config:recommended",
   ],
-<<<<<<< before updating
-  "dependencyDashboardTitle": "Renovate Dashboard",
-=======
   "automergeStrategy": "merge-commit",
->>>>>>> after updating
+  "dependencyDashboardTitle": "Renovate Dashboard",
   "git-submodules": {
     "enabled": true
   },
@@ -29,7 +26,6 @@
   ],
   "packageRules": [
     {
-<<<<<<< before updating
       "matchFileNames": ["**/*.sls"],
       "automerge": true,
       "commitMessageAction": "add",
@@ -39,10 +35,10 @@
         ":semanticCommitScopeDisabled",
         ":semanticCommitType(update)",
       ],
-=======
+    },
+    {
       "matchFileNames": ["template/**"],
       "semanticCommitType": "fix",
->>>>>>> after updating
     },
     {
       "matchManagers": ["git-submodules"],
