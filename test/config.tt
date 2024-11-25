@@ -18,6 +18,7 @@ releaserc_cjs:.releaserc.cjs
 renovate_json5:.github/renovate.json5
 requirements_txt:.cicd/requirements.txt
 tests_py:.cicd/tests.py
+transform-json:.cicd/transform-json
 
 [run_dependent_text]
 stderr:Copying from template version
