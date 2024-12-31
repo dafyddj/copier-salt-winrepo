@@ -8,13 +8,10 @@ The following new files/directories were created:
 ----.copier-answers.yml
 ----.github
 --------renovate.json5
-<<<<<<< before updating
+--------settings.yml
 --------workflows
 ------------full_run_win.yml
 ------------main.yml
 ----.pre-commit-config.yaml
 ----.releaserc.cjs
 ----example.sls
-=======
---------settings.yml
->>>>>>> after updating
