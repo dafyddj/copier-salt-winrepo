@@ -8,6 +8,7 @@ The following new files/directories were created:
 ----.copier-answers.yml
 ----.github
 --------renovate.json5
+--------settings.yml
 --------workflows
 ------------full_run_win.yml
 ------------main.yml
