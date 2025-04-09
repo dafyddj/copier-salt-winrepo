@@ -1,13 +1,21 @@
 {
+<<<<<<< before updating
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "enabledManagers": [
     "copier",
     "custom.regex",
     "git-submodules",
+=======
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  enabledManagers: [
+    'copier',
+    'git-submodules',
+>>>>>>> after updating
   ],
-  "extends": [
-    "config:recommended",
+  extends: [
+    'config:recommended',
   ],
+<<<<<<< before updating
   "automergeStrategy": "merge-commit",
   "dependencyDashboardTitle": "Renovate Dashboard",
   "git-submodules": {
@@ -39,10 +47,24 @@
     {
       "matchFileNames": ["template/**"],
       "semanticCommitType": "fix",
+=======
+  automergeStrategy: 'merge-commit',
+  'git-submodules': {
+    'enabled': true
+  },
+  packageRules: [
+    {
+      matchFileNames: [
+        'template/**'
+      ],
+      semanticCommitType: 'fix',
+>>>>>>> after updating
     },
     {
-      "matchManagers": ["git-submodules"],
-      "automerge": true,
+      automerge: true,
+      matchManagers: [
+        'git-submodules'
+      ],
     },
   ],
 }
