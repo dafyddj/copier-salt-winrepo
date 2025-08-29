@@ -3,16 +3,11 @@
   enabledManagers: [
     'copier',
     'custom.regex',
-    'git-submodules',
   ],
   extends: [
-    'config:recommended',
+    'github>techneg-it/.github',
+    'github>techneg-it/.github:copier',
   ],
-  automergeStrategy: 'merge-commit',
-  dependencyDashboardTitle: 'Renovate Dashboard',
-  'git-submodules': {
-    enabled: true
-  },
   customManagers: [
     {
       customType: 'regex',
@@ -22,7 +17,9 @@
       matchStrings: [
         '# renovate: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>\\S+?)(?: packageName=(?<packageName>\\S+?))?\\s+- ["\']?(?<currentValue>.+?)["\']?\\s',
       ],
+      {% raw -%}
       autoReplaceStringTemplate: '# renovate: datasource={{{datasource}}} depName={{{depName}}}{{#unless (equals depName packageName)}} packageName={{{packageName}}}{{/unless}}\n- \'{{{newValue}}}\'\n- \'{{{currentValue}}}\'\n',
+      {% endraw -%}
       versioningTemplate: 'loose',
     },
   ],
@@ -33,23 +30,13 @@
       ],
       automerge: true,
       commitMessageAction: 'add',
+      {% raw -%}
       commitMessageExtra: '{{prettyNewVersion}}',
       commitMessageTopic: '`{{depName}}` version',
+      {% endraw -%}
       extends: [
         ':semanticCommitScopeDisabled',
         ':semanticCommitType(update)',
-      ],
-    },
-    {
-      matchFileNames: [
-        'template/**'
-      ],
-      semanticCommitType: 'fix',
-    },
-    {
-      automerge: true,
-      matchManagers: [
-        'git-submodules'
       ],
     },
   ],
