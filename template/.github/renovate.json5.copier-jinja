@@ -17,7 +17,9 @@
       matchStrings: [
         '# renovate: datasource=(?<datasource>[a-z-.]+?) depName=(?<depName>\\S+?)(?: packageName=(?<packageName>\\S+?))?\\s+- ["\']?(?<currentValue>.+?)["\']?\\s',
       ],
+      {% raw -%}
       autoReplaceStringTemplate: '# renovate: datasource={{{datasource}}} depName={{{depName}}}{{#unless (equals depName packageName)}} packageName={{{packageName}}}{{/unless}}\n- \'{{{newValue}}}\'\n- \'{{{currentValue}}}\'\n',
+      {% endraw -%}
       versioningTemplate: 'loose',
     },
   ],
@@ -28,8 +30,10 @@
       ],
       automerge: true,
       commitMessageAction: 'add',
+      {% raw -%}
       commitMessageExtra: '{{prettyNewVersion}}',
       commitMessageTopic: '`{{depName}}` version',
+      {% endraw -%}
       extends: [
         ':semanticCommitScopeDisabled',
         ':semanticCommitType(update)',
