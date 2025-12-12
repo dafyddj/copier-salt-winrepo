@@ -23,6 +23,7 @@ transform-json:.cicd/transform-json
 [run_dependent_text]
 full_run_win_yml:(-? uses: [\w-]+\/[.\w-]+)@.+${REPLACE \1@version}
 main_yml:(-? uses: [\w-]+\/[.\w-]+)@.+${REPLACE \1@version}
+main_yml:([A-Za-z0-9_]+?-version:) \S+{REPLACE \1 version}
 pre-commit_yaml:(rev:) \S+{REPLACE \1 version}
 stderr:Copying from template version
 stderr:DirtyLocalWarning{LINES 2}
