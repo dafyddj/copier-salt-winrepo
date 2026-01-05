@@ -1,6 +1,7 @@
 The following new files/directories were created:
 <Test Directory>
 ----.cicd
+--------check-json-in-config.py
 --------minion
 --------requirements.txt
 --------tests.py

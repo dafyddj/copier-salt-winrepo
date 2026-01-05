@@ -10,6 +10,7 @@ full_name:copier-salt-winrepo
 create_catalogues:true
 
 [collate_file]
+check-json-in-config_py:.cicd/check-json-in-config.py
 full_run_win_yml:.github/workflows/full_run_win.yml
 main_yml:.github/workflows/main.yml
 minion:.cicd/minion
