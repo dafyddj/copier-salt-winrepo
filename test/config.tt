@@ -26,6 +26,7 @@ full_run_win_yml:(-? uses: [\w-]+\/[.\w-]+)@.+${REPLACE \1@version}
 main_yml:(-? uses: [\w-]+\/[.\w-]+)@.+${REPLACE \1@version}
 main_yml:([A-Za-z0-9_]+?-version:) \S+{REPLACE \1 version}
 pre-commit_yaml:(rev:) \S+{REPLACE \1 version}
+pre-commit_yaml:(- [a-z0-9_.-]+?==)\S+{REPLACE \1version}
 stderr:Copying from template version
 stderr:DirtyLocalWarning{LINES 2}
 stderr:No git tags found in template; using HEAD as ref
